@@ -30,4 +30,7 @@ $('.scroll').on('click', function (event) {
         $(".main-mnu").slideToggle();
         return false;
     });// end top menu
+
+// parallax effect
+
 }); // ready
