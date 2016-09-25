@@ -1,0 +1,27 @@
+{
+  "name": "test.loc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "chokidar": "^1.5.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-notify": "^2.2.0",
+    "multipipe": "^0.3.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.12",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-sass": "^2.3.1",
+    "imagemin-pngquant": "^5.0.0",
+    "wiredep": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "codegrabber",
+  "license": "ISC"
+}

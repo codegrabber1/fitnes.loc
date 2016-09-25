@@ -1,0 +1,166 @@
+=cover
+  background-repeat: no-repeat
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -ms-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  background-position: 50% 50%
+=size($width: 100%, $height: 100%)
+  -webkit-background-size: $width $height
+  -moz-background-size: $width $height
+  background-position: $width $height
+=vcenter($t: 50%, $l: 50%)
+  position: absolute
+  t: $t
+  l: $l
+  +translate(-50%, -50%)
+// rotate
+=rotate($deg: 0, $m11: 0, $m12: 0,$m21: 0, $m22: 0)
+  -webkit-transform: rotate($deg + deg)
+  -moz-transform: rotate($deg + deg)
+  -ms-transform: rotate($deg + deg)
+  -o-transform: rotate($deg + deg)
+  transform: rotate($deg + deg)
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand')
+  zoom: 1
+// transition
+=transition($what)
+  -webkit-transition: $what
+  -moz-transition: $what
+  -ms-transition: $what
+  -o-transition: $what
+  transition: $what
+//vertical
+=vertical
+  text-align: center
+  font-size: 0
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    width: 0
+    height: 100%
+// placeholder
+=placeholder-color($color)
+  &:-ms-placeholder,
+  &:-ms-placeholder
+    color: $color
+    opacity: 1
+  &::-webkit-input-placeholder
+    color: $color
+=placeholder
+  &:-ms-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+  &::placeholder
+    @content
+// fonts
+=font-smoothing($val: antialiased)
+  -moz--webkit-font-smoothing: $val
+  -ms--webkit-font-smoothing: $val
+  -o--webkit-font-smoothing: $val
+  -webkit-font-smoothing: $val
+// arrow to blocks
+=arr($width, $height, $bg, $direction)
+  width: 0px
+  height: 0px
+  border-style: solid
+  @if $direction == t
+    border-width: 0 $width / 2 + px $height + px $width / 2 + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == r
+    border-width: $height / 2 + px 0 $height / 2 + px $width + px
+    border-color: transparent transparent transparent $bg
+  @if $direction == b
+    border-width: $height + px $width / 2 + px 0 $width / 2 + px
+    border-color: $bg transparent transparent transparent
+  @if $direction == l
+    border-width: $height / 2 + px $width + px $height / 2 + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == tl
+    border-width: $height + px $width + px 0 0
+    border-color: $bg transparent transparent transparent
+  @if $direction == tr
+    border-width: 0 $width + px $height + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == br
+    border-width: 0 0 $height + px $width + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == bl
+    border-width: $height + px 0 0 $width + px
+    border-color: transparent transparent transparent $bg
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+=rotate($var)
+  -ms-transform: rotate($var+deg)
+  -webkit-transform: rotate($var+deg)
+  transform: rotate($var+deg)
+
+=blur($var)
+  -webkit-filter: blur($var)
+  filter: blur($var)
+
+=scale($var)
+  -ms-transform: scale($var)
+  -webkit-transform: scale($var)
+  transform: scale($var)
+
+=counter($var)
+  counter-reset: $var
+  > li, > dt
+    &:before
+      content: counter($var)
+      counter-increment: $var
+
+@function makelongshadow($color)
+  $val: 0px 0px $color
+  @for $i from 1 through 200
+    $val: #{$val}, #{$i}px #{$i}px #{$color}
+  @return $val
+
+=longshadow($color)
+  text-shadow: makelongshadow($color)
+
+=br($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+=bs($bshadow)
+  -webkit-box-shadow: $bshadow
+  -moz-box-shadow: $bshadow
+  -ms-box-shadow: $bshadow
+  -o-box-shadow: $bshadow
+  box-shadow: $bshadow
+
+=ts($string)
+  -webkit-text-shadow: $string
+  -moz-text-shadow: $string
+  -ms-text-shadow: $string
+  -o-text-shadow: $string
+  text-shadow: $string
+
+=links($link, $visit, $hover, $active)
+  a
+    color: $link
+    &:visited
+      color: $visit
+    &:hover
+      color: $hover
+    &:active
+      color: $active
+
+=opacity($trans)
+  -moz-opacity: $trans
+  -khtml-opacity: $trans
+  opacity: $trans
+  filter: alpha(opactiy=($trans * 100))
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})"

@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "authors": [
+    "codegrabber1 <poruchenko@ukr.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.4",
+    "normalize-css": "^4.1.1"
+  }
+}

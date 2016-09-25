@@ -1,0 +1,24 @@
+header
+  background: url('images/4.jpg')
+  +size
+  +cover
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale')
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"
+  padding: 1.5em 0
+  height: 100vh
+
+.logo
+  padding: 15px 30px
+  color: $w_col
+  font-weight: bold
+  text-transform: uppercase
+  span
+    color: $act_link
+.arrow
+  position: relative
+  bottom: -30px
+  margin: 0 auto
+  width: 100px
+.scroll
+  display: block
+@import 'menu'

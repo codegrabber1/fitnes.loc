@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e98aba48-55e0-4e40-874d-b04d6d607582" name="cherka03_ftp" url="http://cherka03.ftp.ukraine.com.ua">
+        <fileTransfer host="cherka03.ftp.ukraine.com.ua" port="21" password="dfc8df98dfffdfebdffbdfc9dfefdfe2" username="cherka03_ftp">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="0ab799fb-3ab3-49c6-9978-97a192e2f604" name="fitnes" url="http://ftp.fitnes.16mb.com">
+        <fileTransfer host="ftp.fitnes.16mb.com" port="21" password="dfe6dfc9dfccdff3dfc2dff2df9edff8df9cdfe1df9ddfc7dffedff0dfefdfe2" username="u266154940.fitnes">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
