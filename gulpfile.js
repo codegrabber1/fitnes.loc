@@ -13,7 +13,7 @@
 
  // bower
 gulp.task('bower', function(){
-	return gulp.src('frontend/index.html')
+	return gulp.src('frontend/*.html')
 	.pipe(wiredep({
 		directory : "frontend/assets/"
 	}))

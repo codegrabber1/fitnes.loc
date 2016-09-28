@@ -97,9 +97,6 @@ section {
     text-decoration: none; }
 
 header {
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  background-position: 100% 100%;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -219,25 +216,49 @@ header {
 
 .post_intro img,
 .widget_block img {
-  width: 100%;
-  height: 300px; }
+  margin: 0 auto;
+  max-height: 400px; }
 
 .text_intro {
-  padding: 1em;
-  line-height: 1.7em;
-  font-size: 16px; }
+  line-height: 1.7em; }
+  .text_intro p {
+    padding: 1em; }
+
+.comments {
+  float: left;
+  margin-right: 18px; }
 
 .links {
-  float: left;
-  padding: 0;
-  text-align: center; }
+  padding: 0; }
   .links li {
-    display: inline-block;
-    margin-right: 30px; }
+    display: block;
+    margin: 5px 0; }
     .links li a {
       color: #ff3366; }
   .links span {
-    padding-left: 10px; }
+    padding-left: 3px; }
+
+#toTopHover {
+  display: block;
+  float: right;
+  height: 32px;
+  opacity: 0;
+  overflow: hidden;
+  width: 32px; }
+
+#toTop {
+  background: url("../images/arr.png") no-repeat scroll 0 0;
+  border: medium none;
+  bottom: 24px;
+  display: none;
+  height: 32px;
+  overflow: hidden;
+  position: fixed;
+  right: 1%;
+  text-decoration: none;
+  text-indent: 100%;
+  width: 32px;
+  z-index: 999; }
 
 .widget_block {
   margin-bottom: 1em; }
@@ -258,6 +279,32 @@ header {
     float: left;
     margin: 2px;
     padding: 7px; }
+
+.b_map {
+  margin: 20px 0; }
+
+.b_from {
+  margin: 20px 0; }
+  .b_from input,
+  .b_from textarea {
+    border: 1px solid #CCCCCC;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px; }
+  .b_from .submit {
+    width: auto;
+    float: right;
+    margin-right: 15px;
+    width: 150px;
+    background-color: #ff3366;
+    font-weight: bold;
+    color: #fff; }
+
+.b_adver {
+  margin: 20px 0; }
+  .b_adver img {
+    width: 100%;
+    height: 600px; }
 
 .pagination {
   width: 100%;

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--[if lt IE 7]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|(IE)]><!--><html lang="ru"><!--[endif]-->
+<!--<html lang="en">-->
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA_Compatible" content="IE=edge">
@@ -288,8 +293,30 @@
 	<!-- bower:js -->
 	<script src="assets/jquery/dist/jquery.js"></script>
 	<!-- endbower -->
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="assets/respond/respond.min.js"></script>
+    <![endif]-->
 	<script src="js/all.js"></script>
 	<script src="js/myscripts.js"></script>
-
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <!-- smooth scrolling -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+             var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+             };
+             */
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!-- //smooth scrolling -->
 </body>
 </html>
