@@ -4,10 +4,16 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "chokidar": "^1.5.1",
+    "browser-sync": "^2.18.6",
+    "chokidar": "^1.6.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^2.3.0",
+    "gulp-imagemin": "^3.1.1",
     "gulp-notify": "^2.2.0",
-    "multipipe": "^0.3.0"
+    "gulp-sass": "^2.3.2",
+    "multipipe": "^0.3.1"
   },
   "devDependencies": {
     "browser-sync": "^2.12.12",
